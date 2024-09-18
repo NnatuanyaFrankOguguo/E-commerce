@@ -1,0 +1,36 @@
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+    
+}
+
+body{
+    min-height: 100vh;
+    font-family: "Zilla Slab", serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.app{
+    width: 80%; /*took 80% width out of 100*/
+    margin: auto; /*to place it in the middle*/
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}

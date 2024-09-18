@@ -1,0 +1,133 @@
+.navbar{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Playfair Display", serif  !important;
+    
+    
+}
+/*adding some padding for the whole body of the page going to index.css classname app*/
+
+.navbar .logo{ /*remember to change the logo*/
+    width : 150px;
+    cursor: pointer;
+
+
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px; /*giving them padding space left & right*/
+    color: rgb(110, 51, 165);
+    font-size: 18px;
+    cursor: pointer;
+    
+}
+
+.navbar-right{
+    display: flex;
+    gap:40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 15px;
+    color: rgb(110, 51, 165);
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+    color: black;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid tomato;
+}
+
+.navbar-search-icon{
+    position: relative;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px
+}
+
+@media (max-width:1050px) {
+    .navbar .logo{
+        width: 140px;     
+    }
+
+    .navbar-menu{
+        gap: 40px;
+        font-size: 17px;
+    }
+
+    .navbar-right{
+        gap: 30px;
+
+    }
+
+    .navbar-right img{
+        width: 22px;
+    }
+
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+
+    
+}
+
+@media (max-width:900px) {
+    .navbar .logo{
+        width: 120px;     
+    }
+
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right{
+        gap: 20px;
+
+    }
+
+    .navbar-right img{
+        width: 20px;
+    }
+
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+    
+    
+}
+
+@media (max-width:750px) {
+
+    .navbar-menu{
+        display: none;
+    }
+
+    
+    
+    
+}
