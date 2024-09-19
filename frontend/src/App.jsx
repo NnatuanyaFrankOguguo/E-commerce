@@ -23,7 +23,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Homepage/>} /> {/* the first opening page always goes with '/' */}
                 <Route path='/cart' element={<Cart/>} /> 
-                <Route path='order' element={<Placeorder/>} />
+                <Route path='/order' element={<Placeorder/>} />
             </Routes>
         </div>
         <Footer/>

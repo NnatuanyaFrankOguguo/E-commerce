@@ -1,11 +1,15 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import "./Navbar.css";
 import { assets } from "../../../frontend_assets/assets";
 import { Link } from 'react-router-dom'
+import shopping_cart from './shopping_cart.png'
+import trolley_cart from './trolley_cart.png'
+import { StoreContext } from "../../Context/Storecontext";
  
 function Navbar({setshowlogin}) {
     /*to create underline effect for the menu list we will use the state varialble */
     const [menu, setmenu] = useState('home')/*created a state variable & initialise it with home as default */
+    const {getTotalCartAmount} = useContext(StoreContext)
     
 
 
@@ -25,9 +29,9 @@ function Navbar({setshowlogin}) {
 				<img src={assets.search_icon} alt="" />
 
 				<div className="navbar-search-icon">
-                    <Link to="/cart"><img src={assets.shopping_cart} alt="" /></Link>
+                    <Link to="/cart"><img className='shopping-cart' src={getTotalCartAmount()===0 ? `${shopping_cart}` : `${trolley_cart}`} alt="" /></Link>
 
-                    <div className="dot">
+                    <div className={getTotalCartAmount()===0 ? '' : 'dot'}>
                         {/*we will design this as dot that whenever will be visual inside the basket 
                         that whenever we add product in this basket that dot will appear */}
                     </div>

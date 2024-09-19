@@ -68,6 +68,10 @@
     right: -8px
 }
 
+.shopping-cart{
+    width: 29px;
+}
+
 @media (max-width:1050px) {
     .navbar .logo{
         width: 140px;     

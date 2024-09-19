@@ -1,12 +1,69 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Placeorder.css'
+import { StoreContext } from '../../Context/Storecontext';
 
 function Placeorder() {
+
+    const{getTotalCartAmount} = useContext(StoreContext)
+
   return (
-    <div>
-      
+    <div className="place-order">
+        <div className="place-order-left">
+            <p className="title">Delivery Information</p>
+
+            <div className="multi-fields">
+                <input type="text" placeholder="First Name" />
+                <input type="text" placeholder="Last Name" />
+            </div>
+
+            <input type="email" placeholder="Email address" />
+            <input type="text" placeholder="Street address" />
+
+            <div className="multi-fields">
+                <input type="text" placeholder="City" />
+                <input type="tel" placeholder="State" />
+            </div>
+
+            <div className="multi-fields">
+                <input type="text" placeholder="Zip code" />
+                <input type="text" placeholder="Country" />
+            </div>
+
+            <input type="tel" placeholder="Phone" />
+        </div>
+
+        <div className="place-order-right">
+
+            <div className="cart-total">
+                <h2>Cart Totals</h2>
+
+                <div>
+                    <div className="cart-total-details">
+                        <p>Subtotal</p>
+                        <p>₦{getTotalCartAmount()}</p>
+                    </div>
+                    <hr />
+
+                    <div className="cart-total-details">
+                        <p>Delivery Fee</p>
+                        <p>₦{getTotalCartAmount()===0? 0 : 5}</p>
+                    </div>
+                    <hr />
+
+                    <div className="cart-total-details">
+                        <b>Total</b>
+                        <b>₦{getTotalCartAmount()===0? 0 : getTotalCartAmount() + 5}</b>
+                    </div>
+                </div>
+                
+                <button onClick={() => navigate("/order")}>
+                    PROCEED TO PAYMENT
+                </button>
+            </div>
+
+        </div>
     </div>
-  )
+  );
 }
 
 export default Placeorder
