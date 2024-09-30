@@ -7,9 +7,14 @@ import Cart from './pages/Cart/Cart'
 import Placeorder from './pages/Placeorder/Placeorder'
 import Footer from './components/footer/footer';
 import Login from './components/Loginpopup/Login';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Verify from './pages/Verifyorder/Verify';
+import Myorders from './pages/Myorders/Myorders';
 
-function App() {
-// to display the login pop up we will create a state variablec
+
+
+const App = () => {// to display the login pop up we will create a state variablec
 
     const [showlogin, setshowlogin] = useState(false) //we initialise it with false
 
@@ -20,10 +25,14 @@ function App() {
         {showlogin ? <Login setshowlogin={setshowlogin}/> : <></>} {/*that is if showlogin is true... render the component login if not/else return the fragment  */}
         <div className='app'>
             <Navbar setshowlogin={setshowlogin}/> {/*since the sign in button is in the navbar component we will pass the setshowlogin as props over there */}
+            <ToastContainer/>
             <Routes>
                 <Route path='/' element={<Homepage/>} /> {/* the first opening page always goes with '/' */}
                 <Route path='/cart' element={<Cart/>} /> 
                 <Route path='/order' element={<Placeorder/>} />
+                <Route path='/verify' element={<Verify/>} />
+                <Route path='/myorders' element={<Myorders/>} />
+
             </Routes>
         </div>
         <Footer/>
