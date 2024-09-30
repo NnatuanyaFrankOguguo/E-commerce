@@ -11,7 +11,7 @@ import Users from './pages/Users/Users'
 
 const App = () => {
 
-    const serverUrl = "http://localhost:5000"; //BACKEND URL TO BE ACCESS EVERYWHERE AS PROPS
+    const serverUrl = "https://e-commerce-backend-3iae.onrender.com" //BACKEND URL TO BE ACCESS EVERYWHERE AS PROPS (during development http://localhost:5000";)
 
   return (
     <div>

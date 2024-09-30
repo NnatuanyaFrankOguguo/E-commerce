@@ -22,8 +22,8 @@ const StoreContextProvider = (props) => {
     const user = JSON.parse(localStorage.getItem("currentuser"))
     
 
-    //BACKEND URL
-    const serverUrl = 'http://localhost:5000'
+    //BACKEND URL during development(http://localhost:5000')
+    const serverUrl = 'https://e-commerce-backend-3iae.onrender.com'
     //store the register token being sent from the backend
     const [token, settoken] = useState('') 
 
