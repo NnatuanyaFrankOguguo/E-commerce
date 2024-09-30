@@ -8,7 +8,7 @@ import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js";
 import foodRouter from "./Routes/foodRoutes.js";
-import userRouter from "./Routes/userroutes.js";
+import userRouter from "./Routes/userRoutes.js";
 import cartRouter from "./Routes/cartRoutes.js";
 import orderRouter from "./Routes/orderRoutes.js";
 
