@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Orders.css'
-import Loader from '../../../../frontend/src/components/LoadSucces/Loader'
+import Loader from '../../components/Loader'
 import axios from 'axios'
 import { assets } from '../../../../frontend/frontend_assets/assets'
 import {toast} from 'react-toastify'

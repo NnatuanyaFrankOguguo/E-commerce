@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Listfoods.css'
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import Loader from '../../../../frontend/src/components/LoadSucces/Loader'
+import Loader from '../../components/Loader';
 
 
 const Listfoods = ({serverUrl}) => { //destructure the data being sent
