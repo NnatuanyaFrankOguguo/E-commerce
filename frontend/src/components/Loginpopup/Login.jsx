@@ -6,7 +6,6 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { StoreContext } from '../../Context/Storecontext';
 import axios from 'axios'
 import Loader from '../LoadSucces/Loader';
-import Success from '../LoadSucces/success';
 
 const Login = ({setshowlogin}) => {
     const [loading, setloading] = useState(false)
@@ -79,7 +78,7 @@ const Login = ({setshowlogin}) => {
         
         <form onSubmit={onLogin} className="login-container">
             <div className="login-title">
-            {success && (<Success message={currentstate==="Login" ? "Login Successfully" : "SignUp Successful"}/> )} {/*the conditions is if success is equal to true show success component sending in the props to appear in the success components as message*/}
+            {/*success && (<Success message={currentstate==="Login" ? "Login Successfully" : "SignUp Successful"*/}{/*the conditions is if success is equal to true show success component sending in the props to appear in the success components as message*/}
                 <h2>{currentstate}</h2>
                 <img onClick={()=>{setshowlogin(false)}}  src={assets.cross_icon} alt="" />
             </div>
