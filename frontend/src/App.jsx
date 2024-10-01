@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Home/Homepage';
 import Cart from './pages/Cart/Cart'
 import Placeorder from './pages/Placeorder/Placeorder'
-import Footer from './components/footer/footer';
+import Footer from './components/Footer/Footer';
 import Login from './components/Loginpopup/Login';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
