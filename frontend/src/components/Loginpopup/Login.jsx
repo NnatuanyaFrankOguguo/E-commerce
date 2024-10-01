@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import Font
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { StoreContext } from '../../Context/Storecontext';
 import axios from 'axios'
-import Loader from '../LoadSucces/loader';
+import Loader from '../LoadSucces/Loader';
 import Success from '../LoadSucces/success';
 
 const Login = ({setshowlogin}) => {
