@@ -7,5 +7,8 @@ import nodeResolve from '@rollup/plugin-node-resolve'; // Add this
 export default defineConfig({
   plugins: [react(), commonjs(), // Include the CommonJS plugin
     nodeResolve()], // Include the Node Resolve plugin],
+    build: {
+        minify: false, // Disable minification for debugging purposes
+      },
   
 })
