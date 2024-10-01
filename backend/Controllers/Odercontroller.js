@@ -13,7 +13,7 @@ const FLW_SECRET_KEY = process.env.FLUTTERWAVE_SECRET_KEY;
 const placeOrder = async (req, res) => {
 
     //defining the frontend URl as success_page when the payment is a success formerly http://localhost:5173"
-    const frontend_url = "https://e-commerce-tomato.onrender.com"
+    //const frontend_url = "https://e-commerce-tomato.onrender.com"
 
     try {
         //we will add the new order  (remember userId is from the authmiddleware that decode the token that will generate the userId)
@@ -36,7 +36,7 @@ const placeOrder = async (req, res) => {
             tx_ref: `tx-${Date.now()}`, //Transaction reference
             amount: totalAmount, //Total amount
             currency: 'NGN', //Currency
-            redirect_url: `${frontend_url}/verify?orderId=${newOrder._id}`, //: Flutterwave uses redirect_url to handle success or failure cases.
+            redirect_url: `https://e-commerce-tomato.onrender.com/verify?orderId=${newOrder._id}`, //: Flutterwave uses redirect_url to handle success or failure cases.
             customer: {
                 email: customer.email,
                 name: customer.name,
