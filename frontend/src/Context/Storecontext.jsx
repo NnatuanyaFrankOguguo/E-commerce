@@ -6,7 +6,7 @@ props.children ensures that any components inside StoreContextProvider will be r
 This setup is useful when you need to manage global state or share data across deeply nested components without passing props down manually.
 THIS CONTEXT API is an front end API */
 
-import React, { createContext, useEffect, useState } from "react"
+import React, { createContext, useEffect, useState } from "react";
 import axios from 'axios'
 
 //import { food_list } from "../../frontend_assets/assets" removing the food_list from the frontend asset but fetch it from the backend
