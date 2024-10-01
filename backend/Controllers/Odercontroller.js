@@ -12,8 +12,8 @@ const FLW_SECRET_KEY = process.env.FLUTTERWAVE_SECRET_KEY;
 
 const placeOrder = async (req, res) => {
 
-    //defining the frontend URl as success_page when the payment is a success
-    const frontend_url = "http://localhost:5173"
+    //defining the frontend URl as success_page when the payment is a success formerly http://localhost:5173"
+    const frontend_url = "https://e-commerce-tomato.onrender.com/"
 
     try {
         //we will add the new order  (remember userId is from the authmiddleware that decode the token that will generate the userId)
