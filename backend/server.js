@@ -11,6 +11,8 @@ import foodRouter from "./Routes/foodRoutes.js";
 import userRouter from "./Routes/userRoutes.js";
 import cartRouter from "./Routes/cartRoutes.js";
 import orderRouter from "./Routes/orderRoutes.js";
+import sanitize from 'express-mongo-sanitize'
+import xss from 'xss-clean';
 
 
 
@@ -23,6 +25,10 @@ app.use(express.json()) /*using this middleware whenever we will get the request
 
 app.use(cors()) /*using this we can access/communicate with any frontend from the backend */
 //done initailising the middleware
+
+// Security middleware //that sanitize we initialise is going to store a function and it will return a middleware
+app.use(sanitize()); // Prevents NoSQL injection attacks
+app.use(xss()); // Prevents XSS attacks
 
 //MONGODB connection(just call the connectDB function here that was defined in the db.js file to connect it to the backend)
 connectDB(); 
@@ -41,6 +47,9 @@ app.use('/api/cart', cartRouter)
 
 //SETTING UP THE ORDER API PATH/NAME
 app.use('/api/order', orderRouter)
+
+
+
 
 app.get('/', (req,res) => {
     res.send('Welcome to API Backend server!')
